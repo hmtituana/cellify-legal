@@ -1,85 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cellify | Términos, Privacidad y Políticas Legales</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #e4e4e7;
-            background-color: #09090b;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #18181b;
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #27272a;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .back-link:hover {
-            color: #fb923c;
-        }
-        h1 { color: #f97316; font-size: 2.2rem; margin-bottom: 5px; }
-        h2 { color: #fb923c; font-size: 1.4rem; margin-top: 35px; border-bottom: 1px solid #27272a; padding-bottom: 8px; }
-        h3 { color: #fdba74; font-size: 1.1rem; margin-top: 20px; }
-        p, li { color: #a1a1aa; font-size: 0.95rem; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .highlight { color: #f43f5e; font-weight: 600; }
-        .footer { text-align: center; margin-top: 40px; font-size: 0.85rem; color: #71717a; border-top: 1px solid #27272a; padding-top: 20px; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Términos, condiciones de uso y política de privacidad de Cellify.">
+  <title>Cellify | Términos, condiciones y privacidad</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root { --bg:#040910; --surface:#0a111d; --line:#1b2a45; --text:#f7f8fc; --muted:#a6b0c5; --orange:#ff8418; --orange-soft:#ffb269; --green:#31d88a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.65; }
+    .container { width:min(920px,calc(100% - 32px)); margin:32px auto 56px; background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:clamp(24px,5vw,48px); box-shadow:0 20px 50px rgba(0,0,0,.26); }
+    .back-link { display:inline-flex; align-items:center; gap:7px; color:var(--muted); text-decoration:none; font-size:.9rem; margin-bottom:26px; }
+    .back-link:hover { color:var(--orange-soft); }
+    .eyebrow { color:var(--orange); font-size:.78rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin:0 0 8px; }
+    h1 { color:var(--text); font-size:clamp(2rem,6vw,3rem); letter-spacing:-.045em; line-height:1.05; margin:0 0 12px; }
+    h2 { color:var(--orange-soft); font-size:1.28rem; line-height:1.25; margin:42px 0 16px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+    h3 { color:var(--text); font-size:1rem; margin:24px 0 8px; }
+    p, li { color:var(--muted); font-size:.96rem; }
+    p { margin:0 0 14px; }
+    ul, ol { padding-left:22px; margin:10px 0 18px; }
+    li { margin:0 0 9px; }
+    strong { color:var(--text); }
+    a { color:var(--orange-soft); }
+    .notice { margin:24px 0; padding:16px 18px; border:1px solid rgba(255,132,24,.58); border-radius:13px; background:rgba(255,132,24,.07); color:var(--muted); }
+    .notice strong { color:var(--orange-soft); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:14px; background:rgba(4,9,16,.44); }
+    .card strong { display:block; font-size:.82rem; color:var(--orange-soft); margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }
+    .card span { color:var(--muted); font-size:.92rem; }
+    .toc { border:1px solid var(--line); border-radius:13px; padding:16px 18px; margin:26px 0 6px; }
+    .toc p { color:var(--text); font-weight:700; margin-bottom:8px; }
+    .toc ol { margin-bottom:0; columns:2; }
+    .toc li { margin-bottom:5px; }
+    .toc a { text-decoration:none; }
+    .footer { margin-top:48px; padding-top:22px; border-top:1px solid var(--line); color:#71809b; font-size:.83rem; text-align:center; }
+    @media (max-width:620px) { .container { width:min(100% - 20px,920px); margin:10px auto 30px; border-radius:15px; } .grid { grid-template-columns:1fr; } .toc ol { columns:1; } }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Volver al inicio</a>
-        
-        <h1>Cellify</h1>
-        <p>Plataforma P2P de comercio seguro de tecnología con sistema de custodia de fondos (Escrow).</p>
+  <main class="container">
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+    <p class="eyebrow">Cellify · Ecuador</p>
+    <h1>Términos, condiciones y privacidad</h1>
+    <p>Última actualización: <strong>11 de septiembre de 2026</strong>.</p>
 
-        <h2>1. Términos y Condiciones de Uso</h2>
-        <p>Bienvenido a <strong>Cellify</strong>. Al registrarte, descargar nuestra aplicación móvil o realizar transacciones a través de nuestros servicios, aceptas cumplir con los siguientes términos operativos y legales:</p>
-        <ul>
-            <li><strong>Custodia de Fondos (Escrow) y Pagos:</strong> Al tratarse de transacciones de bienes físicos, los pagos se procesan exclusivamente a través de pasarelas y proveedores financieros externos autorizados. Los fondos permanecen retenidos en custodia de forma segura por estas entidades y no se liberan al vendedor hasta que ambas partes confirmen la conformidad de la transacción o se resuelva cualquier disputa activa.</li>
-            <li><strong>Verificación de Identidad (KYC):</strong> Es obligatorio para todos los usuarios proporcionar información verídica y documentos de identidad válidos (cédula, pasaporte o datos biométricos) para prevenir fraudes, lavado de activos y operar en la plataforma.</li>
-            <li><strong>Moderación y Contenido de Usuarios (UGC):</strong> Cellify mantiene una política de <span class="highlight">Tolerancia Cero</span> ante publicaciones fraudulentas, estafas, venta de artículos robados o conductas abusivas. La plataforma cuenta con herramientas visibles para reportar usuarios y contenidos infractores, los cuales serán eliminados y sus cuentas bloqueadas en un plazo máximo de 24 horas.</li>
-            <li><strong>Comisiones y Tarifas:</strong> Cellify aplica una tarifa fija de gestión de custodia y una comisión variable por servicios de visibilidad destacados al concretar las operaciones.</li>
-        </ul>
-
-        <h2>2. Política de Privacidad y Tratamiento de Datos</h2>
-        <p>En <strong>Cellify</strong> protegemos tu información personal y financiera bajo estrictos estándares de cifrado:</p>
-        <ul>
-            <li><strong>Uso de Datos KYC:</strong> Los datos de verificación de identidad se utilizan exclusivamente para los procesos de validación de seguridad, cumplimiento legal y prevención de fraudes. No se comercializan con terceros.</li>
-            <li><strong>Datos de Transacciones:</strong> Almacenamos registros cifrados de historiales de compra-venta para auditorías de soporte y resolución de disputas bajo normativas de privacidad vigentes.</li>
-            <li><strong>Derechos del Usuario:</strong> Puedes solicitar en cualquier momento la revisión, actualización o eliminación de tus datos personales enviando una solicitud a nuestro soporte, sujeta a las retenciones legales obligatorias por transacciones pendientes.</li>
-        </ul>
-
-        <h2>3. Resolución de Disputas y Limitación de Responsabilidad</h2>
-        <p>Ante cualquier desacuerdo entre comprador y vendedor:</p>
-        <ul>
-            <li>Ambas partes se comprometen a aportar pruebas válidas (fotografías, guías de envío, videos de apertura) dentro del plazo estipulado en la app.</li>
-            <li>El equipo de arbitraje de Cellify emitirá un fallo inapelable basado en las evidencias presentadas para la liberación o devolución de los fondos en custodia.</li>
-            <li>Cellify actúa como intermediario tecnológico de custodia y no asume responsabilidad directa por daños indirectos derivados del uso indebido de los dispositivos comercializados entre particulares.</li>
-        </ul>
-
-        <div class="footer">
-            &copy; 2026 Cellify. Todos los derechos reservados. | Soporte legal y cumplimiento para App Store y Google Play.
-        </div>
+    <div class="notice">
+      <strong>Antes de publicar</strong><br>
+      Este documento debe completarse con la razón social o nombre del responsable, RUC, domicilio y correo de contacto legal de Cellify. Los marcadores <strong>[●]</strong> no deben quedar en la versión pública.
     </div>
+
+    <nav class="toc" aria-label="Contenido">
+      <p>Contenido</p>
+      <ol>
+        <li><a href="#aceptacion">Aceptación y alcance</a></li>
+        <li><a href="#cuenta">Cuenta y certificación</a></li>
+        <li><a href="#publicaciones">Publicaciones y dispositivos</a></li>
+        <li><a href="#pagos">Pagos, comisiones y desembolso</a></li>
+        <li><a href="#entrega">Entrega, recepción y calificaciones</a></li>
+        <li><a href="#disputas">Disputas</a></li>
+        <li><a href="#conducta">Conductas prohibidas</a></li>
+        <li><a href="#privacidad">Privacidad y datos personales</a></li>
+        <li><a href="#derechos">Derechos y contacto</a></li>
+        <li><a href="#responsabilidad">Responsabilidad</a></li>
+      </ol>
+    </nav>
+
+    <section id="aceptacion">
+      <h2>1. Aceptación y alcance</h2>
+      <p>Cellify es una plataforma tecnológica que facilita la publicación, comparación y negociación de equipos tecnológicos entre usuarios, con un flujo de verificación de pago, coordinación de entrega y desembolso al vendedor. Al crear una cuenta, marcar la casilla de aceptación o utilizar la aplicación, aceptas estos términos y la política de privacidad.</p>
+      <p>Cellify no compra ni vende por cuenta propia los equipos anunciados, salvo que lo indique expresamente en una publicación. El contrato de compraventa se celebra entre comprador y vendedor. Cellify interviene como plataforma de intermediación, verificación operativa y administración del flujo de la transacción descrito en la aplicación.</p>
+      <p>Estos términos se rigen por la legislación aplicable en Ecuador, incluida la normativa sobre contratación electrónica y protección de datos personales. La legislación ecuatoriana reconoce efectos jurídicos a los mensajes de datos en las condiciones previstas por la ley. <a href="https://www.gob.ec/sites/default/files/regulations/2018-10/LEY%20DE%20COMERCIO%20ELECTRONICO%2C%20FIRMAS%20Y%20MENSAJES%20DE%20DATOS.pdf" target="_blank" rel="noopener">Consulta la Ley de Comercio Electrónico, Firmas Electrónicas y Mensajes de Datos</a>.</p>
+    </section>
+
+    <section id="cuenta">
+      <h2>2. Cuenta, datos y certificación</h2>
+      <ul>
+        <li>Debes proporcionar datos completos, exactos y actualizados. No puedes crear una cuenta en nombre de otra persona ni usar documentos, cuentas bancarias o datos de terceros sin autorización.</li>
+        <li>Para publicar, ofertar o vender, Cellify puede exigir completar el perfil, registrar una cuenta bancaria y pasar el proceso de certificación de identidad. Los negocios pueden requerir además la certificación de su información comercial.</li>
+        <li>Una cuenta pendiente de certificación puede explorar el catálogo, pero no puede realizar operaciones hasta su aprobación.</li>
+        <li>Cellify puede solicitar que corrijas información o documentos, rechazar una certificación, suspender o bloquear una cuenta cuando existan inconsistencias, señales de fraude, incumplimiento o un requerimiento legal.</li>
+        <li>Eres responsable de mantener la confidencialidad de tus credenciales y de las actividades realizadas desde tu cuenta.</li>
+      </ul>
+    </section>
+
+    <section id="publicaciones">
+      <h2>3. Publicaciones y equipos</h2>
+      <ul>
+        <li>El vendedor debe describir el equipo de forma veraz: modelo, estado, capacidad, batería, accesorios, reparaciones, factura, IMEI cuando corresponda y cualquier defecto relevante.</li>
+        <li>Está prohibido publicar equipos robados, reportados, bloqueados, falsificados, financiados sin autorización de transferencia, inexistentes o cuya venta infrinja derechos de terceros o la ley.</li>
+        <li>El comprador debe revisar el equipo antes de confirmar la recepción. En especial, debe comprobar que el IMEI coincida con el anunciado y verificar con su operadora que no conste como reportado, robado o bloqueado.</li>
+        <li>Cellify puede retirar, pausar o rechazar publicaciones que incumplan estas reglas, que presenten información engañosa o que comprometan la seguridad de la comunidad.</li>
+      </ul>
+    </section>
+
+    <section id="pagos">
+      <h2>4. Ofertas, pagos, comisiones y desembolso</h2>
+      <ul>
+        <li>Una oferta aceptada inicia una operación con el plazo y los datos de pago mostrados en la aplicación. Si no existe respuesta dentro del plazo indicado, la orden puede cancelarse y ambas partes serán notificadas.</li>
+        <li>El comprador debe transferir únicamente a la cuenta indicada por Cellify para esa operación y adjuntar el comprobante solicitado. No debe enviar pagos directos al vendedor ni usar datos recibidos fuera de la aplicación.</li>
+        <li>El administrador verifica el pago conforme a la evidencia disponible. Tras la verificación, la aplicación revela los datos de contacto necesarios para coordinar la entrega.</li>
+        <li>El pago al vendedor se realiza después de la confirmación de recepción o de la resolución correspondiente. El vendedor puede consultar el comprobante de desembolso cuando se registre en la operación.</li>
+        <li>La comisión de plataforma, el spread aplicable al comprador y, si corresponde, la comisión adicional por destacar un anuncio se muestran en el flujo de la operación. La comisión aplicable a un anuncio destacado queda registrada al momento de destacarlo.</li>
+        <li>Las tarifas configuradas en Cellify pueden cambiar para operaciones futuras. El cambio no modifica las condiciones ya registradas para una operación en curso.</li>
+      </ul>
+    </section>
+
+    <section id="entrega">
+      <h2>5. Entrega, recepción, chat y calificaciones</h2>
+      <ul>
+        <li>Comprador y vendedor deben utilizar los datos revelados por Cellify solo para coordinar la entrega de la operación.</li>
+        <li>Cuando haya entrega física, ambas partes deben procurar un lugar seguro y conservar la evidencia de entrega. Cuando haya envío, deben conservar guía, comprobantes y fotografías pertinentes.</li>
+        <li>El comprador no debe confirmar la recepción hasta revisar el equipo. Una vez confirmada, Cellify puede continuar con el desembolso al vendedor.</li>
+        <li>El chat de coordinación forma parte del historial de la transacción y puede cerrarse una vez finalizada. Los usuarios deben comunicarse con respeto y sin compartir contenido ilícito, amenazante o fraudulento.</li>
+        <li>Al finalizar una operación, Cellify puede habilitar calificaciones entre las partes. Las calificaciones deben ser genuinas y referirse a esa transacción.</li>
+      </ul>
+    </section>
+
+    <section id="disputas">
+      <h2>6. Disputas</h2>
+      <p>Si surge un problema antes de la confirmación final, cualquiera de las partes puede abrir una disputa desde la operación. Cada parte podrá aportar su explicación y las evidencias permitidas por la aplicación, como fotografías, comprobantes o información de envío.</p>
+      <ul>
+        <li>Las partes deben aportar información verdadera, pertinente y dentro de los plazos informados en la app.</li>
+        <li>Cellify revisará la información disponible y podrá solicitar aclaraciones. La decisión operativa determinará la continuación del desembolso, la devolución o la acción que corresponda dentro de la plataforma.</li>
+        <li>La revisión interna no limita los derechos que la ley reconozca a las partes ni la posibilidad de acudir a la autoridad competente.</li>
+      </ul>
+    </section>
+
+    <section id="conducta">
+      <h2>7. Conductas prohibidas</h2>
+      <p>No puedes usar Cellify para defraudar, evadir comisiones, desviar transacciones fuera del flujo de seguridad, suplantar identidades, acosar, manipular calificaciones, cargar malware, vulnerar la plataforma o infringir derechos de terceros.</p>
+      <p>Cellify puede conservar evidencias, limitar funciones, cancelar publicaciones, suspender cuentas y colaborar con autoridades competentes cuando sea necesario para prevenir fraude, atender una obligación legal o proteger a usuarios y a la plataforma.</p>
+    </section>
+
+    <section id="privacidad">
+      <h2>8. Política de privacidad y tratamiento de datos</h2>
+      <p><strong>Responsable del tratamiento:</strong> [● Razón social o nombre completo] · RUC [●] · domicilio [●] · correo de privacidad [●].</p>
+      <p>Tratamos datos personales de acuerdo con la Ley Orgánica de Protección de Datos Personales de Ecuador y la normativa aplicable. Esta ley reconoce derechos como acceso, rectificación, actualización, eliminación, oposición, portabilidad y suspensión del tratamiento. <a href="https://www.gob.ec/sites/default/files/regulations/2025-01/01%20Ley%20Org%C3%A1nica%20de%20Protecci%C3%B3n%20de%20Datos%20Personales.pdf" target="_blank" rel="noopener">Consulta la ley</a>.</p>
+
+      <div class="grid">
+        <div class="card"><strong>Datos que recopilamos</strong><span>Datos de cuenta y contacto, cédula o RUC, dirección, cuenta bancaria, documentos de certificación, publicaciones, evidencias, mensajes de coordinación, calificaciones y registros de actividad.</span></div>
+        <div class="card"><strong>Ubicación</strong><span>Solo si la persona la confirma expresamente durante el registro, se guardan coordenadas para seguridad, soporte o disputas. No se comparten con otros usuarios.</span></div>
+        <div class="card"><strong>Finalidades</strong><span>Crear y administrar la cuenta, certificar identidad, prevenir fraude, ejecutar la operación, resolver disputas, emitir notificaciones, atender soporte y cumplir obligaciones legales.</span></div>
+        <div class="card"><strong>Acceso restringido</strong><span>Los documentos de certificación y la ubicación precisa son accesibles solo para personal administrativo autorizado cuando sea necesario para las finalidades indicadas.</span></div>
+      </div>
+
+      <h3>Base y conservación</h3>
+      <p>Tratamos los datos necesarios para ejecutar la relación solicitada por el usuario, cumplir obligaciones legales, proteger la seguridad de la plataforma y, cuando corresponda, con el consentimiento solicitado. Conservaremos la información mientras exista la cuenta, una transacción, una disputa o una obligación legal, y luego durante el tiempo necesario para atender responsabilidades o requerimientos aplicables.</p>
+
+      <h3>Destinatarios y proveedores</h3>
+      <p>Podemos usar proveedores tecnológicos para alojamiento, autenticación, almacenamiento, notificaciones y envío de correos. Solo compartimos datos con estos proveedores cuando es necesario para prestar el servicio y bajo medidas de seguridad y condiciones aplicables. También podremos revelar información ante una obligación legal válida o para atender fraude y seguridad.</p>
+
+      <h3>Datos entre usuarios</h3>
+      <p>Cellify revela a comprador y vendedor los datos de contacto estrictamente necesarios para coordinar la entrega después de la verificación de pago indicada en la aplicación. No autoriza usar esos datos para publicidad, fines ajenos a la operación o contacto no solicitado.</p>
+    </section>
+
+    <section id="derechos">
+      <h2>9. Tus derechos y contacto</h2>
+      <p>Puedes solicitar acceso, actualización, rectificación, eliminación, oposición, portabilidad o suspensión del tratamiento de tus datos, en la medida permitida por la ley. Para ejercerlos, escribe a <a href="mailto:[●]">[● correo de privacidad]</a> con el asunto “Derechos de datos personales” e indica el correo asociado a tu cuenta.</p>
+      <p>También puedes actualizar la información editable desde tu perfil. Una solicitud de eliminación puede estar sujeta a la conservación de datos necesarios por transacciones, disputas, prevención de fraude u obligaciones legales.</p>
+    </section>
+
+    <section id="responsabilidad">
+      <h2>10. Responsabilidad y cambios</h2>
+      <ul>
+        <li>Cellify no garantiza que un equipo cumpla las expectativas subjetivas del comprador ni sustituye la revisión física o técnica que corresponde realizar antes de confirmar la recepción.</li>
+        <li>No respondemos por acuerdos, pagos o entregas realizados fuera del flujo indicado en la aplicación, ni por información falsa suministrada por un usuario, sin perjuicio de las obligaciones que establezca la ley.</li>
+        <li>Podemos actualizar estos términos cuando cambien el servicio, la seguridad, las tarifas o la normativa. Informaremos los cambios relevantes por medios razonables; el uso posterior a su entrada en vigor implicará aceptación cuando la ley lo permita.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      © 2026 Cellify. Todos los derechos reservados.<br>
+      Responsable: [● Razón social] · RUC [●] · Contacto: [● correo legal]
+    </footer>
+  </main>
 </body>
 </html>
